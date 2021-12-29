@@ -1,0 +1,8 @@
+#list-container {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 100px;
+}

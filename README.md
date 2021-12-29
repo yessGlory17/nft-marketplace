@@ -1,3 +1,28 @@
+# Open Source Nft Marketplace [Onprogress]
+Reactjs And Smart Contracts Open Source Basic Nft Marketplace App
+## Screenshoots 
+
+### Home
+
+![](docs/images/home.png)
+
+### Explore
+
+![explore](docs/images/explore.png)
+
+
+
+
+
+## Todo
+
+- [ ] Search Filters
+- [ ] Connect Wallet (ETH Wallets)
+- [ ] Smartcontract Backend
+- [ ] Community Page
+- [ ] Explore Page Tabs
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

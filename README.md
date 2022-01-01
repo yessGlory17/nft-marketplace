@@ -17,7 +17,7 @@ Reactjs And Smart Contracts Open Source Basic Nft Marketplace App
 ## Todo
 
 - [ ] Search Filters
-- [ ] Connect Wallet (ETH Wallets)
+- [x] Connect Wallet (ETH Wallets)
 - [ ] Smartcontract Backend
 - [ ] Community Page
 - [ ] Explore Page Tabs

@@ -1,6 +1,16 @@
 import react from "react";
 import { Link } from "react-router-dom";
+import { useEthers, useEtherBalance } from "@usedapp/core";
+
 const Header = () => {
+
+    const {activateBrowserWallet, account} = useEthers();
+    const etherBalance = useEtherBalance(account);
+
+    const handleWallet = () => {
+      activateBrowserWallet();
+    }
+
     return (
         <div id="header">
         <Link to='/' id='logo'>NFT Room</Link>
@@ -11,7 +21,7 @@ const Header = () => {
           <a>Community</a>
           <a>Craft NFT</a>
 
-          <button id="connect-wallet">Connect Wallet</button>
+          <button id="connect-wallet" onClick={handleWallet} >{!account ? 'Connect Wallet' : account}</button>
         </div>
       </div>
     );

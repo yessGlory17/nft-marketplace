@@ -47,5 +47,5 @@ Coming soon.
 
 ## 🤝 Contribute
 
-Coming soon.
+[CONTRIBUTING.md](https://github.com/yessGlory17/nft-marketplace/blob/main/CONTRIBUTING.md)
 

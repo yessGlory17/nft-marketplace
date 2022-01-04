@@ -14,7 +14,11 @@ Thank you for investing your time in contributing to our project!
 ![Fork this repository](./assets/fork.png)
 
 2. Now clone the forked repository to your PC by running the following command in you terminale. (Don't forget to put your own github username between instead of `{{YOUR GITHUB USERNAME}}`).
-&nbsp; `git clone https://github.com/{{YOUR GITHUB USERNAME}}/nft-marketplace.git`
+
+```Git
+git clone https://github.com/{{YOUR GITHUB USERNAME}}/nft-marketplace.git
+```
+
 ![Clone the forked repository](./assets/clone.png)
 
 3. Open the project folder or run this command `cd nft-marketplace` to change current working directory.

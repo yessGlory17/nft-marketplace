@@ -82,11 +82,17 @@ a {
   transition: border 1.5s ease;
 }
 
-a:hover {
+#link-containers a:hover {
   border: 1px solid #ffffff;
   border-radius: 30px;
-  transition: border 1.5s ease;
+  /* transition: border 1.5s ease; */
 }
+
+#link-containers a{
+  border: 1px solid #100f17;
+  border-radius: 30px;
+}
+
 
 #header-text-first {
   margin-top: 90px;

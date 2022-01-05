@@ -13,6 +13,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "digambar-t7",
+      "name": "Digambar Tupurwadi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92970968?v=4",
+      "profile": "https://github.com/digambar-t7",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -1,7 +1,6 @@
 import react from "react";
 import Hero from "../components/Hero";
 import "../styles/Home.css";
-import Card from "../components/Card";
 import CardList from "../components/CardList";
 
 const list = [

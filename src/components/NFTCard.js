@@ -20,7 +20,9 @@ const NFTCard = ({ username, nftName, price, nftSrc, likeCount, gradient }) => {
   
 
   return (
-    <Card child={<>
+    <Card 
+    blurColor={colors[0]}
+    child={<>
       <ColorExtractor getColors={getColors}>
       <img className="nft-image" src={nftSrc} />
       </ColorExtractor>

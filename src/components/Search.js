@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "./base/Input";
+import Input from "./base/TextInput";
 import { AiOutlineSearch } from "react-icons/ai";
 
 const Search = () => {

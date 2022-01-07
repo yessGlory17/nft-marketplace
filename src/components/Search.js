@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Search.css";
 import { AiOutlineSearch } from "react-icons/ai";
 
 const Search = () => {
+
+  const [searchtxt, setSearchtxt] = useState('')
+
+  const goSearch = (e) => {
+    setSearchtxt(e.target.value)
+  }
+
   return (
     <div className="search-wrapper">
       <div
@@ -16,7 +23,7 @@ const Search = () => {
               )`,
         }}
       >
-        <input id="search" placeholder="Explore NFT's" />
+        <input id="search" placeholder="Explore NFT's" value={searchtxt} onChange={goSearch} />
         <AiOutlineSearch size="30" color="rgba(48,118,234,1)" />
       </div>
     </div>

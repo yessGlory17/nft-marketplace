@@ -1,4 +1,5 @@
 import react from "react";
+import Accordion from "../components/base/Accordion";
 import Button from "../components/base/Button";
 import Card from "../components/base/Card";
 import Image from "../components/base/Image";
@@ -40,6 +41,8 @@ const Create = () => {
         height="300px"
         src="https://images.unsplash.com/photo-1593642532871-8b12e02d091c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
       />
+
+      <Accordion width='250px' height='50px' />
     </div>
   );
 };

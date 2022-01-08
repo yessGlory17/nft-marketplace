@@ -3,11 +3,18 @@ import Accordion from "../components/base/Accordion";
 import AccordionHeader from "../components/base/AccordionHeader";
 import Button from "../components/base/Button";
 import Card from "../components/base/Card";
+import Checkbox from "../components/base/Checkbox";
 import Image from "../components/base/Image";
 import TextInput from "../components/base/TextInput";
 import { Colors } from "../constants/Colors";
 
 const Create = () => {
+
+  const checkboxOnChange = () => {
+    alert('checkbox is changed');
+  }
+
+
   return (
     <div>
       Create Page
@@ -62,7 +69,19 @@ const Create = () => {
           </>
         }
       />
-      <Accordion width="250px" height="auto" />
+      <Accordion width="250px" height="auto" child={
+        <div style={{width:'90%', marginLeft:'15px',marginTop:'20px'}}>
+          <Checkbox name='Historical NFT' onChange={checkboxOnChange}/>
+          <Checkbox name='Historical NFT' />
+          <Checkbox name='Historical NFT' />
+          <Button
+              width="100%"
+              height="40px"
+              textContent="Submit"
+              color={Colors.buttons.succes}
+            />
+        </div>
+      } />
       <Accordion width="250px" height="40px" />
       <Accordion width="250px" height="40px" />
     </div>

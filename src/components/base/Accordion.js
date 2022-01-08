@@ -17,7 +17,8 @@ const Accordion = ({child }) => {
       setOpen(!isOpen);
       accordionRef.current.style.height = "50px";
     }
-  };
+  }
+
   return (
     <Card
       width="250px"

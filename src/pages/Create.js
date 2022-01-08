@@ -1,5 +1,6 @@
 import react from "react";
 import Accordion from "../components/base/Accordion";
+import AccordionHeader from "../components/base/AccordionHeader";
 import Button from "../components/base/Button";
 import Card from "../components/base/Card";
 import Image from "../components/base/Image";
@@ -41,8 +42,29 @@ const Create = () => {
         height="300px"
         src="https://images.unsplash.com/photo-1593642532871-8b12e02d091c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
       />
-
-      <Accordion width='250px' height='50px' />
+      <Accordion
+        width="250px"
+        height="100px"
+        child={
+          <>
+            <br />
+            <br />
+            <TextInput placeholder="min" />
+            <br />
+            <TextInput placeholder="max" />
+            <br />
+            <Button
+              width="100%"
+              height="40px"
+              textContent="Submit"
+              color={Colors.buttons.succes}
+            />
+          </>
+        }
+      />
+      <Accordion width="250px" height="auto" />
+      <Accordion width="250px" height="40px" />
+      <Accordion width="250px" height="40px" />
     </div>
   );
 };

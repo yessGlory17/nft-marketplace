@@ -1,27 +1,38 @@
-import React, { useState,useRef,forwardRef } from "react";
+import React, { useState, useRef, forwardRef,useEffect } from "react";
 import Card from "./Card";
-import '../../styles/base/Accordion.css';
+import AccordionHeader from "./AccordionHeader";
 
-const Accordion = ({ width, height, acordionHeader }) => {
+const Accordion = ({child }) => {
   const [isOpen, setOpen] = useState(false);
   const accordionRef = useRef();
 
+  useEffect(() => accordionRef.current.style.minHeight = '50px',[]);
+
   const open = () => {
-      if(!isOpen){
-          accordionRef.current.style.height = '500px';
-          setOpen(!isOpen);
-      }else{
-        accordionRef.current.style.height = height;
-        setOpen(!isOpen);
-      }
-  }
+    if (!isOpen) {
+      setOpen(!isOpen);
+      console.log(child);
+      accordionRef.current.style.height = "auto";
+    } else {
+      setOpen(!isOpen);
+      accordionRef.current.style.height = "50px";
+    }
+  };
   return (
     <Card
-      width={width}
-      height={height}
+      width="250px"
+      height="50px"
       ref={accordionRef}
-      onClick={open}
-      child={<h1 style={{ color: "white" }}>Accordion Header</h1>}
+      child={
+        <>
+          <AccordionHeader
+            heading="Accordion Header"
+            onClick={open}
+            isOpen={isOpen}
+          />
+          {isOpen ? child : null}
+        </>
+      }
     />
   );
 };

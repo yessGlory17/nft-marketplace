@@ -5,6 +5,7 @@ import Button from "../components/base/Button";
 import Card from "../components/base/Card";
 import Checkbox from "../components/base/Checkbox";
 import Image from "../components/base/Image";
+import Select from "../components/base/Select";
 import TextInput from "../components/base/TextInput";
 import { Colors } from "../constants/Colors";
 
@@ -71,6 +72,9 @@ const Create = () => {
       />
       <Accordion width="250px" height="auto" child={
         <div style={{width:'90%', marginLeft:'15px',marginTop:'20px'}}>
+          
+          
+          
           <Checkbox name='Historical NFT' onChange={checkboxOnChange}/>
           <Checkbox name='Historical NFT' />
           <Checkbox name='Historical NFT' />
@@ -82,7 +86,15 @@ const Create = () => {
             />
         </div>
       } />
-      <Accordion width="250px" height="40px" />
+      <Accordion width="250px" height="40px" child={
+        <>
+        <br/>
+        
+        <Select items={['test1','test2','test3']} />
+        <br />
+        <Select />
+        </>
+      } />
       <Accordion width="250px" height="40px" />
     </div>
   );

@@ -3,10 +3,10 @@ import '../../styles/base/Checkbox.css';
 
 const Checkbox = ({name,onChange}) => {
   return (
-    <label class="container">
+    <label className="container">
       {name}
       <input type="checkbox" onChange={onChange} />
-      <span class="checkmark"></span>
+      <span className="checkmark"></span>
     </label>
   );
 };

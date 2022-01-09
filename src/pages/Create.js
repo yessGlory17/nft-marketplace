@@ -10,20 +10,18 @@ import TextInput from "../components/base/TextInput";
 import { Colors } from "../constants/Colors";
 
 const Create = () => {
-
   const checkboxOnChange = () => {
-    alert('checkbox is changed');
-  }
-
+    alert("checkbox is changed");
+  };
 
   const selectBoxOnChange = (v) => {
     alert(`Selectbox selected value ${v}`);
-  }
+  };
 
   return (
     <div>
       Create Page
-      <Card />
+      <Card width='250px' height='250px' />
       <TextInput />
       <br />
       <br />
@@ -74,31 +72,42 @@ const Create = () => {
           </>
         }
       />
-      <Accordion width="250px" height="auto" child={
-        <div style={{width:'90%', marginLeft:'15px',marginTop:'20px'}}>
-          
-          
-          
-          <Checkbox name='Historical NFT' onChange={checkboxOnChange}/>
-          <Checkbox name='Historical NFT' />
-          <Checkbox name='Historical NFT' />
-          <Button
+      <Accordion
+        width="250px"
+        height="auto"
+        child={
+          <div style={{ width: "90%", marginLeft: "15px", marginTop: "20px" }}>
+            <Checkbox name="Historical NFT" onChange={checkboxOnChange} />
+            <Checkbox name="Historical NFT" />
+            <Checkbox name="Historical NFT" />
+            <Button
               width="100%"
               height="40px"
               textContent="Submit"
               color={Colors.buttons.succes}
             />
-        </div>
-      } />
-      <Accordion width="250px" height="40px" child={
-        <>
-        <br/>
-        
-        <Select items={['test1','test2','test3']} onChange={selectBoxOnChange} />
-        <br />
-        <Select  items={['test1','test2','test3']} onChange={selectBoxOnChange}/>
-        </>
-      } />
+          </div>
+        }
+      />
+      <Accordion
+        width="250px"
+        height="40px"
+        child={
+          <>
+            <br />
+
+            <Select
+              items={["test1", "test2", "test3"]}
+              onChange={selectBoxOnChange}
+            />
+            <br />
+            <Select
+              items={["test1", "test2", "test3"]}
+              onChange={selectBoxOnChange}
+            />
+          </>
+        }
+      />
       <Accordion width="250px" height="40px" />
     </div>
   );

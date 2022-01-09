@@ -47,7 +47,7 @@ In the project directory, you can run:
 
 
 ## 🗞️ Docs
-Coming soon.
+ - [Base Components](https://github.com/yessGlory17/nft-marketplace/blob/main/docs/design/BaseComponents.md)
 
 ## 🤝 Contribute
 If you want to contribute to this project, simply follow the steps in the contribution guide. I look forward to your contributions. 😊

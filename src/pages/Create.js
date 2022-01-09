@@ -8,6 +8,7 @@ import Image from "../components/base/Image";
 import Select from "../components/base/Select";
 import TextInput from "../components/base/TextInput";
 import { Colors } from "../constants/Colors";
+import {AiOutlineSearch} from 'react-icons/ai';
 
 const Create = () => {
   const checkboxOnChange = () => {
@@ -22,7 +23,7 @@ const Create = () => {
     <div>
       Create Page
       <Card width='250px' height='250px' blurColor="rgba(78, 242, 154,0.3)"/>
-      <TextInput width="250px" height="30px"placeholder="Example Placeholder" />
+      <TextInput width="250px" height="30px" icon={<AiOutlineSearch size="28px" color="#32a852" />} />
       <br />
       <br />
       <br />

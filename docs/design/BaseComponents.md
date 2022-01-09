@@ -70,3 +70,13 @@ Card component similar div html element.
     <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/textinput-basic-example.png?raw=true" />
 
 - ##### :tada: Placeholder
+  ```js
+    <TextInput width="250px" height="30px"placeholder="Example Placeholder" />
+  ```
+  <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/textinput-placeholder-example.png?raw=true" />
+
+- ##### :tada: Icon
+  ```js
+    <TextInput width="250px" height="30px" icon={<AiOutlineSearch size="28px" color="#32a852" />} />
+
+  ```

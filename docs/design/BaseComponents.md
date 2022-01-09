@@ -112,3 +112,37 @@ Input for text or number values.
         alert("checkbox is changed");
     };
   ```
+
+## :sparkles: Select
+
+#### :grey_exclamation: Props
+- items
+- onChange
+
+#### :zap: Usage
+
+- ##### :tada: Items
+  ```js
+  <Select items={["test1", "test2", "test3"]} />
+  ```
+  Before
+  <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/select-before-example.png?raw=true"/>
+
+  After
+  <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/select-after-example.png?raw=true" />
+
+  Selected
+  <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/select-after-select-example.png?raw=true" />
+
+- ##### :tada: onChange
+  ```js
+    <Select
+     items={["test1", "test2", "test3"]}
+     onChange={selectBoxOnChange}
+    />
+  ```
+  ```js
+    const selectBoxOnChange = (v) => {
+        alert(`Selectbox selected value ${v}`);
+    };
+  ```

@@ -101,7 +101,6 @@ const Create = () => {
 
             <Select
               items={["test1", "test2", "test3"]}
-              onChange={selectBoxOnChange}
             />
             <br />
             <Select

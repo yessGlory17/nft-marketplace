@@ -1,4 +1,4 @@
-# NFT Marketplace Base Component for Contributors
+# NFT Marketplace Base Components for Contributors
 
 ## Content
 - Card

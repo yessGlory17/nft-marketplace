@@ -67,5 +67,6 @@ Card component similar div html element.
           <TextInput width="250px" height="30px" />
 
     ```
+    <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/textinput-basic-example.png?raw=true" />
 
-- ##### :tada: Basic
+- ##### :tada: Placeholder

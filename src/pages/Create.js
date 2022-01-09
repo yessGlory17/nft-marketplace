@@ -22,7 +22,7 @@ const Create = () => {
     <div>
       Create Page
       <Card width='250px' height='250px' blurColor="rgba(78, 242, 154,0.3)"/>
-      <TextInput width="250px" height="30px" />
+      <TextInput width="250px" height="30px"placeholder="Example Placeholder" />
       <br />
       <br />
       <br />

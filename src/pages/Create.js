@@ -81,7 +81,7 @@ const Create = () => {
         child={
           <div style={{ width: "90%", marginLeft: "15px", marginTop: "20px" }}>
             <Checkbox name="Historical NFT" onChange={checkboxOnChange} />
-            <Checkbox name="Historical NFT" />
+            <Checkbox name="Checkbox Example" />
             <Checkbox name="Historical NFT" />
             <Button
               width="100%"

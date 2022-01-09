@@ -88,3 +88,9 @@ Input for text or number values.
     <TextInput width="250px" height="30px" type="text" />
   ```
   <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/textinput-basic-example.png?raw=true" />
+
+## :sparkles: Checkbox
+
+#### :grey_exclamation: Props
+- name
+- onChange

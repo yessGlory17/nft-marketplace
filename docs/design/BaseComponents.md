@@ -48,3 +48,4 @@ Card component similar div html element.
     ```js 
           <Card width='250px' height='250px' blurColor="rgba(78, 242, 154,0.3)"/>
     ```
+    <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/card-blurColor-example.png?raw=true" />

@@ -94,3 +94,21 @@ Input for text or number values.
 #### :grey_exclamation: Props
 - name
 - onChange
+
+#### :zap: Usage
+
+- ##### :tada: Name
+  ```js
+   <Checkbox name="Checkbox Example" />
+  ```
+  <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/checkbox-name-example.png?raw=true" />
+
+- ##### :tada: onChange
+  ```js
+    <Checkbox name="Historical NFT" onChange={checkboxOnChange} />
+  ```
+  ```js
+    const checkboxOnChange = () => {
+        alert("checkbox is changed");
+    };
+  ```

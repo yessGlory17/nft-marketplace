@@ -21,7 +21,16 @@ const Create = () => {
   return (
     <div>
       Create Page
-      <Card width='250px' height='250px' />
+      <Card width='250px' height='250px'
+       child={
+         <div style={{width:'100%', height:'100%',display:'flex',flexDirection:'column',justifyContent:'center', alignItems:'center'}}>
+          <Button width='100px' height='50px' color={Colors.buttons.primary} textContent="Primary" />
+          <Button width='100px' height='50px' color={Colors.buttons.secondary} textContent="Secondary" />
+          <Button width='100px' height='50px' color={Colors.buttons.danger} textContent="Danger"/>
+          <Button width='100px' height='50px' color={Colors.buttons.succes} textContent="Succes" />
+         </div>
+       }
+      />
       <TextInput />
       <br />
       <br />

@@ -125,13 +125,13 @@ Input for text or number values.
   ```js
   <Select items={["test1", "test2", "test3"]} />
   ```
-  Before
+  - Before
   <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/select-before-example.png?raw=true"/>
 
-  After
+  - After
   <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/select-after-example.png?raw=true" />
 
-  Selected
+  - Selected
   <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/select-after-select-example.png?raw=true" />
 
 - ##### :tada: onChange

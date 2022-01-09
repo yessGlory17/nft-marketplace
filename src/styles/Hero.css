@@ -157,8 +157,6 @@ button#explore {
     #38ef7d,
     #11998e
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  font-weight: 600;
   color:#ffffff;
   cursor: pointer;
 }
@@ -174,18 +172,9 @@ button#create {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: transparent;
   border: 2px solid #ffffff;
-  
-  font-weight: 600;
   color: #ffffff;
   cursor: pointer;
   
-}
-
-button#explore:hover{
-  box-shadow: 0 1px 8px 0;
-}
-button#create:hover{
-  box-shadow: 0 1px 8px 0;
 }
 
 

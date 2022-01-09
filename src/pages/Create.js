@@ -11,14 +11,7 @@ import { Colors } from "../constants/Colors";
 import {AiOutlineSearch} from 'react-icons/ai';
 
 const Create = () => {
-  const checkboxOnChange = () => {
-    alert("checkbox is changed");
-  };
-
-  const selectBoxOnChange = (v) => {
-    alert(`Selectbox selected value ${v}`);
-  };
-
+  
   return (
     <div>
       Create Page

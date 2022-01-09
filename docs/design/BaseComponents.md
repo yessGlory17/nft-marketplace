@@ -163,3 +163,39 @@ Input for text or number values.
   ```js
   <Button width="150px" height="30px" textContent="Primary Button" />
   ```
+  <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/button-basic-example.png?raw=true" />
+
+- ##### :tada: Color
+  ```js
+  <Button
+    width="150px"
+    height="30px"
+    textContent="Secondary Button"
+    color={Colors.buttons.secondary}
+  />
+  ```
+  <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/button-color-example.png?raw=true" />
+
+- ##### :tada: textColor
+  ```js
+  <Button
+    width="150px"
+    height="30px"
+    textContent="Danger Button"
+    color={Colors.buttons.danger}
+    textColor="blue"
+  />
+  ```
+  <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/button-textColor-example.png?raw=true" />
+
+- ##### :tada: onClick
+  ```js
+  <Button
+    width="150px"
+    height="30px"
+    textContent="Danger Button"
+    color={Colors.buttons.danger}
+    onClick={()=>alert('Hello World')}
+    textColor="blue"
+  />
+  ```

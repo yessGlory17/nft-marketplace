@@ -18,9 +18,13 @@
     text-align: center;
     object-fit: cover;
     cursor: pointer;
-    transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out, height .5s ease-in-out !important;
+    -webkit-tap-highlight-color: transparent;
+
+
   }
 
   .card:focus{
       outline: none;
   }
+

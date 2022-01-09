@@ -146,3 +146,20 @@ Input for text or number values.
         alert(`Selectbox selected value ${v}`);
     };
   ```
+
+## :sparkles: Button
+
+#### :grey_exclamation: Props
+- width
+- height
+- color
+- onClick
+- textColor => Hover Text Color
+- textContent => Button Name
+
+#### :zap: Usage
+
+- ##### :tada: Basic
+  ```js
+  <Button width="150px" height="30px" textContent="Primary Button" />
+  ```

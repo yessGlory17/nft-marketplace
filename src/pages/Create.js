@@ -29,25 +29,46 @@ const Create = () => {
       <br />
       <br />
       <br />
+      <div style={{
+        width:'500px',
+        height:'1000px',
+        display:'flex',
+        flexDirection:'column',
+        alignItems:'center',
+        justifyContent:'center',
+      }}>
       <Button width="150px" height="30px" textContent="Primary Button" />
+      <br/>
+      <br/>
+      <br/>
       <Button
         width="150px"
         height="30px"
         textContent="Secondary Button"
         color={Colors.buttons.secondary}
       />
+      <br/>
+      <br/>
+      <br/>
       <Button
         width="150px"
         height="30px"
-        textContent="Secondary Button"
+        textContent="Danger Button"
         color={Colors.buttons.danger}
+        onClick={()=>alert('Hello World')}
+        textColor="blue"
       />
+      <br/>
+      <br/>
+      <br/>
       <Button
         width="150px"
         height="30px"
-        textContent="Secondary Button"
+        textContent="Succes Button"
         color={Colors.buttons.succes}
       />
+      </div>
+      
       <Image
         width="300px"
         height="300px"

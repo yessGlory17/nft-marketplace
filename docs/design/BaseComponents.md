@@ -9,7 +9,7 @@
 - Button
 - Accordion
     - Accordion Header
-
+- Image
 
 ## :sparkles: Card
 Card component similar div html element.
@@ -52,20 +52,21 @@ Card component similar div html element.
 
 
 
-    ## :sparkles: TextInput
-    Input for text or number values.
+## :sparkles: TextInput
+Input for text or number values.
 
-    #### :grey_exclamation: Props
-    - width
-    - height
-    - placeholder (default: default input)
-    - icon => TextInput right icon or button
-    - type (text/number)
+#### :grey_exclamation: Props
+
+- width
+- height
+- placeholder (default: default input)
+- icon => TextInput right icon or button
+- type (text/number)
+    
 #### :zap: Usage
 - ##### :tada: Basic
     ```js
           <TextInput width="250px" height="30px" />
-
     ```
     <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/textinput-basic-example.png?raw=true" />
 
@@ -78,5 +79,12 @@ Card component similar div html element.
 - ##### :tada: Icon
   ```js
     <TextInput width="250px" height="30px" icon={<AiOutlineSearch size="28px" color="#32a852" />} />
-
   ```
+  <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/textinput-icon-example.png?raw=true"/>
+
+
+- ##### :tada: Type
+  ```js
+    <TextInput width="250px" height="30px" type="text" />
+  ```
+  <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/textinput-basic-example.png?raw=true" />

@@ -53,6 +53,8 @@ const Create = () => {
         height="300px"
         src="https://images.unsplash.com/photo-1593642532871-8b12e02d091c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
       />
+      <br/>
+      <br/>
       <Accordion
         width="250px"
         height="100px"
@@ -110,6 +112,9 @@ const Create = () => {
         }
       />
       <Accordion width="250px" height="40px" />
+      <br/>
+      <br/>
+      <br/>
     </div>
   );
 };

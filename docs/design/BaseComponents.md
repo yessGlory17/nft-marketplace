@@ -105,7 +105,7 @@ Input for text or number values.
 
 - ##### :tada: onChange
   ```js
-    <Checkbox name="Historical NFT" onChange={checkboxOnChange} />
+    <Checkbox name="Checkbox Example" onChange={checkboxOnChange} />
   ```
   ```js
     const checkboxOnChange = () => {

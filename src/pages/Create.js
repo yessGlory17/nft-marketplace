@@ -16,6 +16,10 @@ const Create = () => {
   }
 
 
+  const selectBoxOnChange = (v) => {
+    alert(`Selectbox selected value ${v}`);
+  }
+
   return (
     <div>
       Create Page
@@ -90,9 +94,9 @@ const Create = () => {
         <>
         <br/>
         
-        <Select items={['test1','test2','test3']} />
+        <Select items={['test1','test2','test3']} onChange={selectBoxOnChange} />
         <br />
-        <Select />
+        <Select  items={['test1','test2','test3']} onChange={selectBoxOnChange}/>
         </>
       } />
       <Accordion width="250px" height="40px" />

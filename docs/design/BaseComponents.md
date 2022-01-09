@@ -228,4 +228,33 @@ Input for text or number values.
 - child
 
 #### :zap: Usage
+- ##### :tada: Basic
+  ```js
+  <Accordion width="250px" height="40px" />
+  ```
+  <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/accordion-basic.png?raw=true">
+
 - ##### :tada: Child
+  ```js
+  <Accordion
+    width="250px"
+    height="100px"
+    child={
+     <>
+        <TextInput placeholder="min" />
+        <TextInput placeholder="max" />
+        <Button
+            width="100%"
+            height="40px"
+            textContent="Submit"
+            color={Colors.buttons.succes}
+        />
+    </>
+    }
+   />
+  ```
+  - After
+  <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/accordion-basic.png?raw=true">
+
+  - Before
+  <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/accordion-child-example.png?raw=true" />

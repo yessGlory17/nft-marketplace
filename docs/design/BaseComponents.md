@@ -49,3 +49,23 @@ Card component similar div html element.
           <Card width='250px' height='250px' blurColor="rgba(78, 242, 154,0.3)"/>
     ```
     <img src="https://github.com/yessGlory17/nft-marketplace/blob/base-components/docs/images/base/card-blurColor-example.png?raw=true" />
+
+
+
+    ## :sparkles: TextInput
+    Input for text or number values.
+
+    #### :grey_exclamation: Props
+    - width
+    - height
+    - placeholder (default: default input)
+    - icon => TextInput right icon or button
+    - type (text/number)
+#### :zap: Usage
+- ##### :tada: Basic
+    ```js
+          <TextInput width="250px" height="30px" />
+
+    ```
+
+- ##### :tada: Basic

@@ -4,7 +4,7 @@ import '../../styles/base/TextInput.css';
 //Base Input Component
 //Usage: <Input width='550px' height='30px' />
 
-const TextInput = ({width,height, placeholder='default input', icon }) => {
+const TextInput = ({width,height, placeholder='default input', icon,type}) => {
   return (
     <div className="search-wrapper">
       <div
@@ -20,7 +20,7 @@ const TextInput = ({width,height, placeholder='default input', icon }) => {
                 )`,
         }}
       >
-        <input id="search" placeholder={placeholder} type='text'/>
+        <input id="search" placeholder={placeholder} type={type}/>
         {icon}
       </div>
     </div>

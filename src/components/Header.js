@@ -1,14 +1,25 @@
 import react from "react";
 import { Link } from "react-router-dom";
 import { useEthers, useEtherBalance } from "@usedapp/core";
+import { walletConnect } from "../lib/wallets";
 
 const Header = () => {
 
-    const {activateBrowserWallet, account} = useEthers();
+    const {activateBrowserWallet, activate, account} = useEthers();
     const etherBalance = useEtherBalance(account);
 
-    const handleWallet = () => {
-      activateBrowserWallet();
+    const connectWallet = (wallet) => {
+      switch (wallet) {
+        case "metamask":
+          activateBrowserWallet();
+          break;
+        case "walletconnect":
+          activate(walletConnect);
+          break;
+        default:
+          activateBrowserWallet();
+          break;
+      }
     }
 
     return (
@@ -21,7 +32,7 @@ const Header = () => {
           <a>Community</a>
           <a>Craft NFT</a>
 
-          <button id="connect-wallet" onClick={handleWallet} >{!account ? 'Connect Wallet' : account}</button>
+          <button id="connect-wallet" onClick={connectWallet} >{!account ? 'Connect Wallet' : account}</button>
         </div>
       </div>
     );

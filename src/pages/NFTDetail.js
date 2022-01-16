@@ -33,8 +33,8 @@ const NFTDetail = () => {
       <Header />
       <div id="nft-detail-card-wrapper">
         <Card
-          width={isMobile ? "100%" : "70vw"}
-          height="60vh"
+          width={isMobile ? "100%" : "65vw"}
+          height={isMobile ? "530px" : "60vh"}
           blurColor={colors[0]}
           child={
             //Detail Content
@@ -44,14 +44,7 @@ const NFTDetail = () => {
               </ColorExtractor>
 
               <div id="detail-info" style={{}}>
-                <div style={{
-                  width:'100%',
-                  height:'90%',
-                  // border:'1px solid red',
-                  marginBottom:'20px',
-                  overflow:'hidden',
-                  paddingBottom:'20px',
-                }}>
+                <div id='detail-info-container'>
                   <p id="collection"> {state.item.name} </p>
                   <p id="name"> {state.item.name} </p>
                   <p id="description" > {state.item.description} </p>

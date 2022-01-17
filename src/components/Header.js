@@ -1,7 +1,7 @@
 import react from "react";
 import { Link } from "react-router-dom";
 import { useEthers, useEtherBalance } from "@usedapp/core";
-import { walletConnect } from "../lib/wallets";
+import { walletConnect, walletLink, ledger, fortmatic, portis } from "../lib/wallets";
 
 const Header = () => {
 
@@ -16,8 +16,20 @@ const Header = () => {
         case "walletconnect":
           activate(walletConnect);
           break;
+        case "walletlink":
+            activate(walletLink);
+            break;
+        case "ledger":
+            activate(ledger);
+            break;
+        case "fortmatic":
+            activate(fortmatic);
+            break;
+        case "portis":
+            activate(portis);
+            break;
         default:
-          activateBrowserWallet();
+          console.log("Unknown wallet");
           break;
       }
     }
@@ -32,7 +44,7 @@ const Header = () => {
           <a>Community</a>
           <a>Craft NFT</a>
 
-          <button id="connect-wallet" onClick={connectWallet} >{!account ? 'Connect Wallet' : account}</button>
+          <button id="connect-wallet" onClick={() => connectWallet("metamask")} >{!account ? 'Connect Wallet' : account}</button>
         </div>
       </div>
     );

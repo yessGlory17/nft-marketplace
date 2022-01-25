@@ -13,7 +13,7 @@ Thank you for investing your time in contributing to our project!
 1. Fork this repository by clicking on the fork button on the top of this page. This will create a copy of this repository in your account.
 ![Fork this repository](./assets/fork.png)
 
-2. Now clone the forked repository to your PC by running the following command in you terminale. (Don't forget to put your own github username between instead of `{{YOUR GITHUB USERNAME}}`).
+2. Now clone the forked repository to your PC by running the following command in you terminale. (Don't forget to put your own GitHub username between instead of `{{YOUR GITHUB USERNAME}}`).
 
 ```Git
 git clone https://github.com/{{YOUR GITHUB USERNAME}}/nft-marketplace.git
@@ -43,5 +43,5 @@ You can commit to your repository every time you make a change to the code and t
 
 #### Once ready with your contribution
 
-Go to your forked repository on Github, enter the `pull requests` tab and click on the `New pull request` button and give your pull request a descriptive title.
+Go to your forked repository on GitHub, enter the `pull requests` tab and click on the `New pull request` button and give your pull request a descriptive title.
 ![Pull request](./assets/pull.png)

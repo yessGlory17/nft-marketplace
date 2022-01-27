@@ -12,13 +12,15 @@ import Explore from "./pages/Explore";
 import { DAppProvider } from "@usedapp/core";
 
 ReactDOM.render(
+  <DAppProvider config={{}}>
   <BrowserRouter>
       <Routes>
-        <Route path="/" element={<DAppProvider config={{}}><Home /></DAppProvider>} />
+        <Route path="/" element={<Home />} />
         <Route path="/create" element={<Create />} />
-        <Route path="/explore" element={<DAppProvider config={{}}><Explore /></DAppProvider>} />
+        <Route path="/explore" element={<Explore />} />
       </Routes>
-    </BrowserRouter>,
+    </BrowserRouter>
+    </DAppProvider>,
   document.getElementById("root")
 );
 

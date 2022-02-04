@@ -67,9 +67,11 @@ p#description{
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     color:#C6C2C6;
     font-size: 18px;
-    margin-top: 10px;
+    margin-top: 32px;
     text-align: left;
     padding-left: 20px;
+    line-height: 28px;
+    font-weight: 300;
 }
 
 #detail-controls{
@@ -173,7 +175,11 @@ p#description{
         word-wrap: break-word;
         text-overflow: ellipsis;
         overflow: hidden;
-        padding-left: 10px;
+        margin-top: 32px;
+        text-align: left;
+        padding-left: 20px;
+        line-height: 28px;
+        font-weight: 300;
     }
     #detail-info{
         width:100%;
@@ -185,13 +191,16 @@ p#description{
     }
     #detail-info-container{
         width:100%;
-        height:220px;
+        height: 310px;
         /* border:1px solid green; */
         margin-bottom:20px;
         overflow:hidden;
         padding-bottom:20px;
-        word-wrap: break-word;
-        word-break:'ellipsis-vertical';
+        /* word-wrap: break-word;
+        word-break:'ellipsis-vertical' !important; */
+        white-space: pre-line;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     #detail-controls{

@@ -2,7 +2,7 @@
     width:100%;
     height:100%;
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
     align-items:center;
     justify-content:center;
     padding-top:50px;
@@ -127,13 +127,41 @@ p#description{
     flex-direction: row;
 }
 
+#more-nft-container{
+    /* display: flex;
+    flex-direction: row;
+    border:1px solid red;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch; 
+    margin-bottom: 50px; */
+    /* display:block;
+    top:0;
+    left:0; */
+    display: flex;
+    flex-direction: row;
+    width:80px;
+    height:450px;
+    margin:0;
+    /* background:#abc; */
+    overflow-y:hidden;
+    overflow-x:auto;
+    /* transform:rotate(-90deg) translateY(-80px); */
+    transform-origin:right left;
+}
+
+#more-nft-list-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
 
 @media screen and (max-width: 1000px) {
     #nft-detail-card-wrapper{
         width:100%;
         height:60%;
         display:flex;
-        flex-direction:row;
+        flex-direction:column;
         align-items:center;
         justify-content:center;
         padding-top:50px;

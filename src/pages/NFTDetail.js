@@ -8,7 +8,7 @@ import { ColorExtractor } from "react-color-extractor";
 import Button from "../components/base/Button";
 import { FaEthereum } from "react-icons/fa";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-import { useMobile } from "../hooks/useWidth";
+import { useMobile } from "../hooks/isMobile";
 
 const NFTDetail = () => {
   const isMobile = useMobile();
@@ -26,7 +26,10 @@ const NFTDetail = () => {
 
   const { state } = useLocation();
 
-  console.log(state);
+  //console.log(state);
+
+  //TODO : NFT Card Responsive 
+  //TODO : Mobil surumde kart icerigi tasiyor.
 
   return (
     <div>
@@ -34,7 +37,7 @@ const NFTDetail = () => {
       <div id="nft-detail-card-wrapper">
         <Card
           width={isMobile ? "100%" : "65vw"}
-          height={isMobile ? "530px" : "60vh"}
+          height={isMobile ? "700px" : "60vh"}
           blurColor={colors[0]}
           child={
             //Detail Content

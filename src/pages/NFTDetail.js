@@ -26,7 +26,7 @@ const NFTDetail = () => {
 
   const { state } = useLocation();
 
-  //console.log(state);
+  
 
   //TODO : NFT Card Responsive 
   //TODO : Mobil surumde kart icerigi tasiyor.

@@ -42,10 +42,14 @@ const NFTDetail = () => {
     if(moreNftListRef.current != null){
       //moreNftListRef.current
       moreNftListRef.current.addEventListener("wheel",()=>{
-        console.log('aaaa');
+        
       })
     }
   },[moreNftListRef])
+
+  //!! aciklama karakter sayisi sinirlanmali.
+  //!! scroll sorununa cozum bulunmali.
+
 
   return (
     <div>

@@ -128,26 +128,19 @@ p#description{
 }
 
 #more-nft-container{
-    /* display: flex;
-    flex-direction: row;
-    border:1px solid red;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch; 
-    margin-bottom: 50px; */
-    /* display:block;
-    top:0;
-    left:0; */
+    width: calc(60vw - 250px);
     display: flex;
     flex-direction: row;
-    width:80px;
-    height:450px;
-    margin:0;
-    /* background:#abc; */
-    overflow-y:hidden;
-    overflow-x:auto;
-    /* transform:rotate(-90deg) translateY(-80px); */
-    transform-origin:right left;
+    /* border:1px solid red; */
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: auto;
+    margin-top: 30px; 
+    margin-bottom: 50px;
+
+    padding-right: 35px;
+    align-items: center;
+    
 }
 
 #more-nft-list-wrapper{

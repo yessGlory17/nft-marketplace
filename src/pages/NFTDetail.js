@@ -1,4 +1,4 @@
-import React, { useState, useEffect,createRef } from "react";
+import React, { useState, useEffect, createRef } from "react";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import { useLocation, Navigate } from "react-router";
@@ -7,11 +7,12 @@ import "../styles/NFTDetail.css";
 import { ColorExtractor } from "react-color-extractor";
 import Button from "../components/base/Button";
 import { FaEthereum } from "react-icons/fa";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiFillHeart, AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { useMobile } from "../hooks/isMobile";
-import {hotDropsData} from "../constants/MockupData";
-import CardList from "../components/CardList";
+import { hotDropsData } from "../constants/MockupData";
 import NFTCard from "../components/NFTCard";
+
+
 
 const NFTDetail = () => {
   const isMobile = useMobile();
@@ -20,7 +21,6 @@ const NFTDetail = () => {
 
   const [isLike, setIsLike] = useState(false);
 
-  const moreNftListRef = createRef();
 
   const like = () => setIsLike(!isLike);
 
@@ -32,23 +32,33 @@ const NFTDetail = () => {
 
   const { state } = useLocation();
 
-  useEffect(()=>{
+  useEffect(() => {
     setColors([]);
-  },[state]);
+  }, [state]);
 
 
 
-  useEffect(()=>{
-    if(moreNftListRef.current != null){
-      //moreNftListRef.current
-      moreNftListRef.current.addEventListener("wheel",()=>{
-        
-      })
-    }
-  },[moreNftListRef])
+  
 
   //!! aciklama karakter sayisi sinirlanmali.
   //!! scroll sorununa cozum bulunmali.
+  const settings = {
+    arrows: false,
+      className: 'sliderContainer',
+      vertical: true,
+      infinite: true,
+      speed: 200,
+      autoplay: true,
+      autoplaySpeed: 2000,
+  };
+
+
+  const moreNFTs = hotDropsData.map((hot, i) => {
+    console.log("aaa")
+    return (
+      <NFTCard nftName={hot.name} nftSrc={hot.src} price="1.1" key={i} />
+    )
+  })
 
 
   return (
@@ -110,11 +120,7 @@ const NFTDetail = () => {
             </div>
           }
         />
-        <div id="more-nft-container" ref={moreNftListRef} style={{ width: isMobile ? "100%" : "65vw" }}>
-            {hotDropsData.map((hotDrop,index)=>(
-              <NFTCard nftSrc={hotDrop.src} key={index} onClick={()=>navigate('/detail',{state:{item:hotDrop}})}/>
-            ))}
-        </div>
+        
       </div>
 
     </div>

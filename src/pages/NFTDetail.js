@@ -42,24 +42,6 @@ const NFTDetail = () => {
 
   //!! aciklama karakter sayisi sinirlanmali.
   //!! scroll sorununa cozum bulunmali.
-  const settings = {
-    arrows: false,
-      className: 'sliderContainer',
-      vertical: true,
-      infinite: true,
-      speed: 200,
-      autoplay: true,
-      autoplaySpeed: 2000,
-  };
-
-
-  const moreNFTs = hotDropsData.map((hot, i) => {
-    console.log("aaa")
-    return (
-      <NFTCard nftName={hot.name} nftSrc={hot.src} price="1.1" key={i} />
-    )
-  })
-
 
   return (
     <div>

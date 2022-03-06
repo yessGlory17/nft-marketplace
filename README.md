@@ -24,23 +24,25 @@ I aim to create an open and safe nft marketplace for everyone. This will be a ch
 
 ![explore](docs/images/explore.png)
 
-
+### Nft Detail
+![detail](docs/images/nft-detail.png)
 
 
 
 ## 🎉 Roadmap
 
-**Alpha Release Date 28 February 2022**
+
+**Alpha Release Date 30 March 2022**
  - [x] Base Components (9/9) (Base components of the project )
- - [ ] Search Filters
+ - [ ] Search Filters for Explore Page
  - [x] Connect Wallet (ETH Wallets)(Supports Other Wallets 🚀)
- - [ ] NFT Detail Page (Date: 09 February 2022)
+ - [x] NFT Detail Page
  - [ ] Smartcontract Backend (Truffle)
  - [ ] Community Page
  - [x] Login
- - [ ] Create Page
+ - [ ] NFT Create Page
  - [ ] Users Pages
- - [ ] Collections
+ - [ ] User Collections
  - [ ] Connect Wallet Popup
  - [ ] Supported Mobile Devices
  - [ ] AR supports for 3d NFTs

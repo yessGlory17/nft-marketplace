@@ -7,7 +7,8 @@ const Button = ({
   color = "#ffffff",
   onClick,
   textColor = "black",
-  textContent = 'Button'
+  textContent = 'Button',
+  child
 }) => {
   const [isHover, setHover] = useState(false);
 
@@ -26,7 +27,7 @@ const Button = ({
         backgroundColor: isHover ? color : "transparent",
       }}
     >
-      {textContent}
+      {child ? child : textContent}
     </button>
   );
 };

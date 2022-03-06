@@ -8,7 +8,7 @@ import Button from "./base/Button";
 import { Colors } from "../constants/Colors";
 
 
-const NFTCard = ({ username, nftName, price, nftSrc, likeCount, gradient }) => {
+const NFTCard = ({ username, nftName, price, nftSrc, likeCount, gradient,onClick }) => {
   const [isLike, setIsLike] = useState(false);
   const [colors,setColors] = useState([]);
 
@@ -24,6 +24,7 @@ const NFTCard = ({ username, nftName, price, nftSrc, likeCount, gradient }) => {
   return (
     <Card 
     blurColor={colors[0]}
+    onClick={onClick}
     child={<>
       <ColorExtractor getColors={getColors}>
       <img className="nft-image" src={nftSrc} />

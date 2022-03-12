@@ -22,7 +22,7 @@
     object-fit:cover;
     border-radius:30px;
 }
-model-viewer{
+model-viewer#arDetail{
     width:60%;
     height:100%;
 }
@@ -168,7 +168,7 @@ p#description{
         object-fit:cover;
         border-radius:30px;
     }
-    model-viewer{
+    model-viewer#arDetail{
         width:100%;
         height:350px !important;
     }

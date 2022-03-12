@@ -56,7 +56,7 @@ const NFTDetail = () => {
           child={
             //Detail Content
             <div id="detail-content">
-             {isARSupport ? <model-viewer ar-scale="auto" ar ar-modes="webxr scene-viewer quick-look" id="reveal" loading="eager" camera-controls auto-rotate src={state.item.src} > </model-viewer> 
+             {isARSupport ? <model-viewer ar-scale="auto" ar ar-modes="webxr scene-viewer quick-look" id="arDetail" loading="eager" camera-controls auto-rotate src={state.item.src} > </model-viewer> 
              : <> <ColorExtractor getColors={getColors}>
                 <img id="detail-image" src={state.item.src} />
               </ColorExtractor></>}

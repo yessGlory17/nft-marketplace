@@ -38,9 +38,9 @@ const NFTCard = ({ username, nftName, price, nftSrc, likeCount, gradient,onClick
   return (
     <Card 
     blurColor={colors[0]}
-    onClick={onClick}
+    
     child={<>
-      {isARSupport ? <model-viewer id="reveal" loading="eager" camera-controls auto-rotate  src={nftSrc} > </model-viewer> : <><ColorExtractor getColors={getColors}>
+      {isARSupport ? <model-viewer ar-scale="auto" ar ar-modes="webxr scene-viewer quick-look" id="reveal" loading="eager" camera-controls auto-rotate  src={nftSrc} > </model-viewer> : <><ColorExtractor getColors={getColors}>
       <img className="nft-image" src={nftSrc} />
       </ColorExtractor></>}
       <div className="wrapper">
@@ -59,7 +59,7 @@ const NFTCard = ({ username, nftName, price, nftSrc, likeCount, gradient,onClick
       </div>
       <div className="buttons">
         {/* <button className="buy-now">Buy Now</button> */}
-        <Button  color={Colors.buttons.primary} textContent="Buy Now" />
+        <Button  color={Colors.buttons.primary} textContent="Buy Now" onClick={onClick} />
         <div className="like-container">
           <button className="like" onClick={like}>
             {!isLike ? (

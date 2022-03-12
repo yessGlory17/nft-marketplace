@@ -40,7 +40,7 @@ const NFTCard = ({ username, nftName, price, nftSrc, likeCount, gradient,onClick
     blurColor={colors[0]}
     onClick={onClick}
     child={<>
-      {isARSupport ? <model-ModelViewerElement id="reveal" loading="eager" camera-controls auto-rotate  src={nftSrc} /> : <><ColorExtractor getColors={getColors}>
+      {isARSupport ? <model-viewer id="reveal" loading="eager" camera-controls auto-rotate  src={nftSrc} > </model-viewer> : <><ColorExtractor getColors={getColors}>
       <img className="nft-image" src={nftSrc} />
       </ColorExtractor></>}
       <div className="wrapper">

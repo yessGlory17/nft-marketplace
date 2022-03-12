@@ -11,6 +11,7 @@ import { AiOutlineHeart, AiFillHeart, AiOutlineArrowLeft, AiOutlineArrowRight } 
 import { useMobile } from "../hooks/isMobile";
 import { hotDropsData } from "../constants/MockupData";
 import NFTCard from "../components/NFTCard";
+import { useARStatus } from "../hooks/isARStatus";
 
 
 
@@ -20,7 +21,8 @@ const NFTDetail = () => {
   const [colors, setColors] = useState([]);
 
   const [isLike, setIsLike] = useState(false);
-
+  
+  
 
   const like = () => setIsLike(!isLike);
 
@@ -36,7 +38,7 @@ const NFTDetail = () => {
     setColors([]);
   }, [state]);
 
-
+  const isARSupport = useARStatus(state.item.src);
 
   
 
@@ -54,9 +56,10 @@ const NFTDetail = () => {
           child={
             //Detail Content
             <div id="detail-content">
-              <ColorExtractor getColors={getColors}>
+             {isARSupport ? <model-viewer ar-scale="auto" ar ar-modes="webxr scene-viewer quick-look" id="reveal" loading="eager" camera-controls auto-rotate src={state.item.src} > </model-viewer> 
+             : <> <ColorExtractor getColors={getColors}>
                 <img id="detail-image" src={state.item.src} />
-              </ColorExtractor>
+              </ColorExtractor></>}
 
               <div id="detail-info" style={{}}>
                 <div id='detail-info-container'>

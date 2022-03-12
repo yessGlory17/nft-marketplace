@@ -1,4 +1,4 @@
-import react from "react";
+import react, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useEthers, useEtherBalance } from "@usedapp/core";
 
@@ -9,6 +9,7 @@ const Header = () => {
 
     const handleWallet = () => {
       activateBrowserWallet();
+
     }
 
     return (

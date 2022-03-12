@@ -173,3 +173,13 @@
   );
     }
 }
+
+model-viewer{
+    width:240px;
+    height:170px;
+}
+
+model-modelviewerelement{
+    width:240px;
+    height:170px;
+}

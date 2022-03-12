@@ -45,7 +45,7 @@ I aim to create an open and safe nft marketplace for everyone. This will be a ch
  - [ ] User Collections
  - [ ] Connect Wallet Popup
  - [ ] Supported Mobile Devices
- - [ ] AR supports for 3d NFTs
+ - [x] AR supports for 3d NFTs
 
 ## 🔮 Usage
 In the project directory, you can run:

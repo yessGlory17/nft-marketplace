@@ -34,7 +34,7 @@ I aim to create an open and safe nft marketplace for everyone. This will be a ch
 ## 🎉 Roadmap
 
 
-**Alpha Release Date 30 March 2022**
+
  - [x] Base Components (9/9) (Base components of the project )
  - [ ] Search Filters for Explore Page
  - [x] Connect Wallet (ETH Wallets)(Supports Other Wallets 🚀)

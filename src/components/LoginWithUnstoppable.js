@@ -2,16 +2,14 @@ import UAuth from '@uauth/js'
 
 const uauth = new UAuth({
   clientID: process.env.REACT_APP_UNSTOPPABLE_CLIENT_ID,
-  redirectUri: 'http://localhost:3000/',
+  redirectUri: 'http://localhost:3000',
 })
 
- export async function login() {
+ export async function UnstoppableLogin() {
   try {
     const authorization = await uauth.loginWithPopup() 
-    console.log(authorization)
-    console.log(authorization.idToken.sub)
-    console.log(authorization.idToken.wallet_address)
     localStorage.setItem("domain", authorization.idToken.sub)
+    console.log("login clicked")
     window.location.reload()
   } catch (error) {
     console.error(error)

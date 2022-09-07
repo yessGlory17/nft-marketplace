@@ -2,7 +2,7 @@ import UAuth from '@uauth/js'
 
 const uauth = new UAuth({
   clientID: process.env.REACT_APP_UNSTOPPABLE_CLIENT_ID,
-  redirectUri: 'http://localhost:3000',
+  redirectUri: 'https://nft-marketplace-temp.vercel.app/',
 })
 
  export async function UnstoppableLogin() {

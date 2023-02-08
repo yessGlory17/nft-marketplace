@@ -40,6 +40,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Vansh-Baghel",
+      "name": "Vansh Baghel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/103327712?v=4",
+      "profile": "https://github.com/Vansh-Baghel",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -47,5 +56,6 @@
   "projectOwner": "yessGlory17",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }

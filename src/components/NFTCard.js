@@ -7,7 +7,6 @@ import Card from "./base/Card";
 import Button from "./base/Button";
 import { Colors } from "../constants/Colors";
 
-
 import { ModelViewerElement } from "@google/model-viewer";
 import { useARStatus } from "../hooks/isARStatus";
 
@@ -29,10 +28,6 @@ const NFTCard = ({ username, nftName, price, nftSrc, likeCount, gradient, onClic
     setColors(c => [...c, ...colors]);
     //console.log(colors);
   }
-
-
-
-
 
   return (
     <Card

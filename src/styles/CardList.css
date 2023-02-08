@@ -2,10 +2,28 @@
     /* border:1px solid blue; */
     display:flex;
     flex-wrap: wrap;
-    margin-left: 45px;
-    margin-right: 45px;
     align-items:center;
     justify-content: center;
     width: 80vw;
     margin-bottom: 100px;
+}
+
+.rec .rec-dot {
+    box-shadow: 0 0 1px 2px rgb(0 0 0 / 50%) !important;
+    background-color: white !important;
+}
+
+.rec .rec-dot_active {
+    box-shadow: 0 0 1px 2px rgb(0 0 0 / 50%) !important;
+    background-color: rgb(112, 44, 228) !important;
+}
+
+.rec .rec-arrow {
+    color: white;
+}
+
+@media (max-width: 510px) {
+    #card-list {
+        width: 100%;
+    }
 }

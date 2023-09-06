@@ -30,7 +30,7 @@ const NFTDetail = () => {
     setColors((c) => [...c, ...colors]);
   };
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   const { state } = useLocation();
 
@@ -39,14 +39,20 @@ const NFTDetail = () => {
   }, [state]);
 
   const isARSupport = useARStatus(state.item.src);
-
+  
   
 
   //!! aciklama karakter sayisi sinirlanmali.
   //!! scroll sorununa cozum bulunmali.
+  
+    const navigate=useNavigate()
+    const clickHandler=()=>{
+      navigate('/',{replace:true})
+  }
 
   return (
     <div>
+
       <Header />
       <div id="nft-detail-card-wrapper">
         <Card
@@ -60,7 +66,9 @@ const NFTDetail = () => {
              : <> <ColorExtractor getColors={getColors}>
                 <img id="detail-image" src={state.item.src} />
               </ColorExtractor></>}
-
+<div id="back-btn">
+  <p onClick={clickHandler}>&times;</p>
+</div>
               <div id="detail-info" style={{}}>
                 <div id='detail-info-container'>
                   <p id="collection"> {state.item.name} </p>

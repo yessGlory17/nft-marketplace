@@ -15,6 +15,17 @@
     display:flex;
     flex-direction:row;
 }
+#back-btn{
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    font-size: 30px;
+    top: 10px;
+    right: 15px; 
+    color: #ffffff;
+    
+}
 
 #detail-image{
     width:60%;

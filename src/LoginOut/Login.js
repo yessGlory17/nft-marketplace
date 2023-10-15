@@ -8,6 +8,24 @@ const Login = () => {
 
   const nav = useNavigate();
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   try {
+  //     const response = await axios.post("http://127.0.0.1:3001/login", {
+  //       email,
+  //       password,
+  //     });
+  //     console.log(response.data);
+  //     if (response.data === "Success") {
+  //       nav("/home");
+  //     } else {
+  //       alert("Data not found");
+  //     }
+  //   } catch (error) {
+  //     console.error(error.response.data);
+  //   }
+  // };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -16,16 +34,19 @@ const Login = () => {
         email,
         password,
       });
-      console.log(response.data);
-      if (response.data === "Success") {
+
+      if (response.data.success) {
+        // Store user's name in local storage or context
+        localStorage.setItem("userName", response.data.name);
         nav("/home");
       } else {
-        alert("Data not found");
+        alert("Incorrect email or password");
       }
     } catch (error) {
-      console.error(error.response.data);
+      console.error("Error during login: ", error);
     }
   };
+  ///////////////////////////////////////////
   return (
     <div style={containerStyle}>
       <h1 style={headerStyle}>Welcome Back!</h1>

@@ -3,10 +3,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Login = () => {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-
   const nav = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,14 +15,16 @@ const Login = () => {
         email,
         password,
       });
-      console.log(response.data);
-      if (response.data === "Success") {
+
+      if (response.data.success) {
+        // Store user's name in local storage or context
+        localStorage.setItem("userName", response.data.name);
         nav("/home");
       } else {
-        alert("Data not found");
+        alert("Incorrect email or password");
       }
     } catch (error) {
-      console.error(error.response.data);
+      console.error("Error during login: ", error);
     }
   };
   return (

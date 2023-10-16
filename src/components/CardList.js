@@ -1,14 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import NFTCard from "./NFTCard";
 import "../styles/CardList.css";
 import { useNavigate } from "react-router-dom";
 import Carousel from "react-elastic-carousel";
-import { useRef } from "react";
 
 const CardList = ({ list, type = "horizontal" }) => {
   let navigate = useNavigate();
   const carouselRef = useRef(null);
-  let resetTimeout;
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -20,7 +18,7 @@ const CardList = ({ list, type = "horizontal" }) => {
   return (
     <div
       id="card-list"
-      style={{ flexDirection: type == "horizontal" ? "row" : "column" }}
+      style={{ flexDirection: type === "horizontal" ? "row" : "column" }}
     >
       <Carousel
         ref={carouselRef}
@@ -28,12 +26,6 @@ const CardList = ({ list, type = "horizontal" }) => {
         autoPlaySpeed={4000}
         isRTL={false}
         breakPoints={breakPoints}
-        onNextEnd={({ index }) => {
-          clearTimeout(resetTimeout);
-          resetTimeout = setTimeout(() => {
-            carouselRef?.current?.goTo(0);
-          }, 4000); // same time
-        }}
       >
         {list.map((item, index) => (
           <NFTCard

@@ -1,14 +1,16 @@
 import react from "react";
 import CardList from "../components/CardList";
 import { exploreList } from "../constants/MockupData";
-import '../styles/Explore.css';
+import "../styles/Explore.css";
 import Header from "../components/Header";
 import Search from "../components/Search";
+import React from "react";
+
 const Explore = () => {
   return (
     <div id="explore">
       <Header />
-      <Search/>
+      <Search />
       <div id="list-container">
         <CardList list={exploreList} />
       </div>

@@ -3,12 +3,9 @@ import Hero from "../components/Hero";
 import "../styles/Home.css";
 import CardList from "../components/CardList";
 import { hotDropsData } from "../constants/MockupData";
-
-
+import React from "react";
 
 const Home = () => {
-
-
   return (
     <div id="home">
       <Hero list={hotDropsData} />

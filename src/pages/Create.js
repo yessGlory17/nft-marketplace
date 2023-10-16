@@ -8,17 +8,18 @@ import Image from "../components/base/Image";
 import Select from "../components/base/Select";
 import TextInput from "../components/base/TextInput";
 import { Colors } from "../constants/Colors";
-import {AiOutlineSearch} from 'react-icons/ai';
+import { AiOutlineSearch } from "react-icons/ai";
 import Header from "../components/Header";
 import { useEthers, useEtherBalance } from "@usedapp/core";
+import React from "react";
 
 const Create = () => {
-  const {activateBrowserWallet, account} = useEthers();
+  const { activateBrowserWallet, account } = useEthers();
   const etherBalance = useEtherBalance(account);
 
-  useEffect(()=>{
+  useEffect(() => {
     activateBrowserWallet();
-  },[])
+  }, []);
 
   return (
     <>

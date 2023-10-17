@@ -2,6 +2,7 @@ import react, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useEthers, useEtherBalance } from "@usedapp/core";
 import React, { Component } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { activateBrowserWallet, account } = useEthers();
@@ -11,6 +12,10 @@ const Header = () => {
     activateBrowserWallet();
   };
   const userName = localStorage.getItem("userName");
+  const navigate = useNavigate();
+  const logOut = () => {
+    navigate("/");
+  };
   return (
     <div id="header">
       <Link to="/" id="logo">
@@ -28,17 +33,37 @@ const Header = () => {
           fontWeight: "600", // Make the text bold
           color: "#ffffff", // Set text color to white
           cursor: "pointer",
-          borderRadius: "50%", // Make the element round
-          borderWidth: "8px", // Make the border thicker
-          borderStyle: "solid", // Set the border style to solid
+          border: "2px",
+
+          borderRadius: "50px", // Make the element round
+          borderWidth: "5px", // Make the border thicker
+          // borderStyle: "solid", // Set the border style to solid
           borderColor: "#ffffff", // Set border color to white
-          padding: "20px", // Increase the padding to expand the background around the text
+          padding: "15px", // Increase the padding to expand the background around the text
         }}
       >
         Hello, {userName}
       </h1>
 
       <div id="link-containers">
+        <button
+          style={{
+            width: "170px",
+            height: "40px",
+            borderRadius: "50px",
+            fontSize: "18px",
+            border: "none",
+            fontFamily:
+              "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+            backgroundColor: "transparent",
+            border: "2px solid #ffffff",
+            color: "#ffffff",
+            cursor: "pointer",
+          }}
+          onClick={logOut}
+        >
+          Logout
+        </button>
         <a>Start Hunting</a>
         <a>Dark NFTs</a>
         <a>Community</a>

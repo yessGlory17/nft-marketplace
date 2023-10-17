@@ -12,9 +12,10 @@ import { useARStatus } from "../hooks/isARStatus";
 
 
 
-const NFTCard = ({ username, nftName, price, nftSrc, likeCount, gradient, onClick }) => {
+const NFTCard = ({ username, nftName, price, nftSrc, likeCountProp, gradient, onClick }) => {
   const [isLike, setIsLike] = useState(false);
   const [colors, setColors] = useState([]);
+  const [likeCount,setLikeCount]=useState(0)
 
   const isARSupport = useARStatus(nftSrc);
 
@@ -23,12 +24,24 @@ const NFTCard = ({ username, nftName, price, nftSrc, likeCount, gradient, onClic
   }, [])
 
   const like = () => setIsLike(!isLike);
-
+ 
   const getColors = colors => {
     setColors(c => [...c, ...colors]);
     //console.log(colors);
   }
+  const toggleLike = () => {
+    if (isLike) {
+      setLikeCount(likeCount - 1);
+    } else {
+      setLikeCount(likeCount + 1);
+    }
+    setIsLike(!isLike);
+  
+    like()
+  };
 
+
+  
   return (
     <Card
       blurColor={colors[0]}
@@ -55,11 +68,11 @@ const NFTCard = ({ username, nftName, price, nftSrc, likeCount, gradient, onClic
           {/* <button className="buy-now">Buy Now</button> */}
           <Button color={Colors.buttons.primary} textContent="Buy Now" onClick={onClick} />
           <div className="like-container">
-            <button className="like" onClick={like}>
+            <button  id="like" className={isLike ? 'isLike' : ''} onClick={toggleLike}>
               {!isLike ? (
-                <AiOutlineHeart size="30" color="white" />
+                <AiOutlineHeart  size="30" color="white" />
               ) : (
-                <AiFillHeart size="30" style={{
+                <AiFillHeart className="like-count" size="30" style={{
                   stroke: `-webkit-linear-gradient(
                     to bottom,
                     #38ef7d,
@@ -68,10 +81,12 @@ const NFTCard = ({ username, nftName, price, nftSrc, likeCount, gradient, onClic
                 }} color='#00f5c966' />
               )}
             </button>
-            <p className="like-count">123</p>
+            <span className="like-count">{likeCount} </span>
+            
           </div>
-        </div>
-      </>}>
+        </div>    
+      </>
+      }>
 
     </Card>
   );

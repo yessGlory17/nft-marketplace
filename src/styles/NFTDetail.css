@@ -130,21 +130,36 @@ p#description{
     flex-direction: row;
 }
 
-#more-nft-container{
-    width: calc(60vw - 250px);
-    display: flex;
-    flex-direction: row;
-    /* border:1px solid red; */
-    overflow-y: hidden;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: auto;
-    margin-top: 30px; 
-    margin-bottom: 50px;
-
-    padding-right: 35px;
-    align-items: center;
-    
+#more-nft-container {
+  width: 100%;
+  display: flex;
+  overflow-x: auto; /* horizontal scroll only when needed */
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  gap: 20px;
+  box-sizing: border-box;
 }
+
+#more-nft-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* keep cards in one line */
+}
+
+#more-nft-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+#more-nft-container::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+#more-nft-container::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
 
 #more-nft-list-wrapper{
     display: flex;

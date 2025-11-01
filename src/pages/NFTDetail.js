@@ -21,8 +21,8 @@ const NFTDetail = () => {
   const [colors, setColors] = useState([]);
 
   const [isLike, setIsLike] = useState(false);
-  
-  
+
+
 
   const like = () => setIsLike(!isLike);
 
@@ -40,7 +40,7 @@ const NFTDetail = () => {
 
   const isARSupport = useARStatus(state.item.src);
 
-  
+
 
   //!! aciklama karakter sayisi sinirlanmali.
   //!! scroll sorununa cozum bulunmali.
@@ -56,10 +56,10 @@ const NFTDetail = () => {
           child={
             //Detail Content
             <div id="detail-content">
-             {isARSupport ? <model-viewer ar-scale="auto" ar ar-modes="webxr scene-viewer quick-look" id="arDetail" loading="eager" camera-controls auto-rotate src={state.item.src} > </model-viewer> 
-             : <> <ColorExtractor getColors={getColors}>
-                <img id="detail-image" src={state.item.src} />
-              </ColorExtractor></>}
+              {isARSupport ? <model-viewer ar-scale="auto" ar ar-modes="webxr scene-viewer quick-look" id="arDetail" loading="eager" camera-controls auto-rotate src={state.item.src} > </model-viewer>
+                : <> <ColorExtractor getColors={getColors}>
+                  <img id="detail-image" src={state.item.src} />
+                </ColorExtractor></>}
 
               <div id="detail-info" style={{}}>
                 <div id='detail-info-container'>
@@ -105,7 +105,15 @@ const NFTDetail = () => {
             </div>
           }
         />
-        
+        {/* More NFTs section */}
+        <div id="more-nft-container">
+          <div id="more-nft-list-wrapper">
+            {hotDropsData.map((item, index) => (
+              <NFTCard key={index} item={item} />
+            ))}
+          </div>
+        </div>
+
       </div>
 
     </div>
